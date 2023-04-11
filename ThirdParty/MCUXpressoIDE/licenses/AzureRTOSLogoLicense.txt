@@ -1,0 +1,1 @@
+The Azure RTOS ThreadX logo is owned and copyrighted by Microsoft Corporation, and is used with permission

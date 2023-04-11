@@ -1,0 +1,56 @@
+﻿$version 12.00
+
+// This is the root component of the entire GUI application.
+$rect <40,40,240,80>
+$output false
+class Application : Core::Root
+{
+  $rect <0,410,200,450>
+  inherited property Bounds = <0,0,390,390>;
+
+  $rect <0,460,200,500>
+  inherited method Init()
+  {
+    /* add a round mask for composer to get an impression of a round display... */
+    $if $prototyper
+
+    var Views::Image mask = new Views::Image;
+    mask.Bitmap = Application::RoundMask;
+    mask.Color = #444444C0;
+    mask.Bounds = Bounds.orect;
+    Add( mask, 0 );
+
+    $endif
+  }
+
+  $rect <20,20,160,60>
+  object Accelerator::Accelerator Accelerator
+  {
+    preset Bounds = <0,0,390,390>;
+    preset NoOfRectFill = $NoOfRectFill;
+    preset NoOfRectBlend = $NoOfRectBlend;
+    preset NoOfRGB565Bmp = $NoOfRGB565Bmp;
+    preset NoOfNativeBmp = $NoOfNativeBmp;
+    preset NoOfRGB565BmpOpacity = $NoOfRGB565BmpOpacity;
+    preset NoOfNativeBmpOpacity = $NoOfNativeBmpOpacity;
+    preset NoOfAlpha8Bmp = $NoOfAlpha8Bmp;
+  }
+}
+
+// Application class of the example
+note group Note4
+{
+  attr Bounds = <20,0,660,100>;
+}
+
+$rect <250,40,450,80>
+$output false
+resource Resources::Bitmap RoundMask
+{
+  attr bitmapfile FileName = .\Res\390x390Mask.png;
+  attr framesize FrameSize;
+  attr framedelay FrameDelay;
+  attr bitmapformat Format = Alpha8;
+  attr bitmapdithering Dithering = Auto;
+  attr bitmapmode Mode = Default;
+}

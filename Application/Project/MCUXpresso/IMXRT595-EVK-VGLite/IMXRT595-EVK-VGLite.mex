@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding= "UTF-8" ?>
+<configuration name="MIMXRT595S" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_12 http://mcuxpresso.nxp.com/XSD/mex_configuration_12.xsd" uuid="b8f9e298-9206-45c9-b5c9-4490821865f6" version="12" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_12" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <common>
+      <processor>MIMXRT595S</processor>
+      <package>MIMXRT595SFFOC</package>
+      <board>MIMXRT595-EVK</board>
+      <mcu_data>ksdk2_0</mcu_data>
+      <cores selected="cm33">
+         <core name="Cortex-M33" id="cm33" description=""/>
+      </cores>
+      <description>Configuration imported from IMXRT595-EVK-VGLite</description>
+   </common>
+   <preferences>
+      <validate_boot_init_only>true</validate_boot_init_only>
+      <generate_extended_information>false</generate_extended_information>
+      <generate_code_modified_registers_only>false</generate_code_modified_registers_only>
+      <update_include_paths>false</update_include_paths>
+      <generate_registers_defines>false</generate_registers_defines>
+   </preferences>
+   <tools>
+      <pins name="Pins" version="12.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="TargetSpecific/Drivers/pin_mux.c" update_enabled="true"/>
+            <file path="TargetSpecific/Drivers/pin_mux.h" update_enabled="true"/>
+         </generated_project_files>
+         <pins_profile>
+            <processor_version>12.0.1</processor_version>
+         </pins_profile>
+         <functions_list>
+            <function name="BOARD_InitUARTPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>cm33</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitUARTPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitUARTPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="FLEXCOMM0" signal="RXD_SDA_MOSI_DATA" pin_num="H16" pin_signal="PIO0_2/FC0_RXD_SDA_MOSI_DATA/CTIMER0_MAT2/I2S_BRIDGE_DATA_IN/SEC_PIO0_2">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM0" signal="TXD_SCL_MISO_WS" pin_num="G16" pin_signal="PIO0_1/FC0_TXD_SCL_MISO_WS/CTIMER0_MAT1/I2S_BRIDGE_WS_IN/SEC_PIO0_1"/>
+               </pins>
+            </function>
+            <function name="BOARD_InitFlexIOPanelPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>cm33</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitFlexIOPanelPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitFlexIOPanelPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="FLEXCOMM4" signal="RXD_SDA_MOSI_DATA" pin_num="D14" pin_signal="PIO0_30/FC4_RXD_SDA_MOSI_DATA/CTIMER4_MAT2/I2S_BRIDGE_DATA_OUT/SEC_PIO0_30">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="pupdsel" value="pullUp"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM4" signal="TXD_SCL_MISO_WS" pin_num="B11" pin_signal="PIO0_29/FC4_TXD_SCL_MISO_WS/CTIMER4_MAT1/I2S_BRIDGE_WS_OUT/SEC_PIO0_29">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="pupdsel" value="pullUp"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 0" pin_num="R8" pin_signal="PIO4_20/DBI_CSX/SD1_D6/FC11_SCK/FLEXIO_D0">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 1" pin_num="P10" pin_signal="PIO4_21/DBI_DSX/SD1_D7/FC11_TXD_SCL_MISO/FLEXIO_D1">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 2" pin_num="U10" pin_signal="PIO4_22/SD1_CARD_DET_N/FC11_RXD_SDA_MOSI/FLEXIO_D2">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 3" pin_num="T8" pin_signal="PIO4_23/DBI_RWDX/LCD_ENABLE/SD1_RESET_N/FC11_CTS_SDA_SSELN0/TRACECLK/FLEXIO_D3">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 4" pin_num="T10" pin_signal="PIO4_24/DBI_WRX/LCD_DTCLK/SD1_VOLT/FC11_RTS_SCL_SSELN1/TRACEDATA_0/FLEXIO_D4">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 5" pin_num="T11" pin_signal="PIO4_25/DBI_E/LCD_HSYNC/FC11_SSELN2/TRACEDATA_1/FLEXIO_D5">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 6" pin_num="T12" pin_signal="PIO4_26/LCD_VSYNC/FC11_SSELN3/TRACEDATA_2/FLEXIO_D6">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 7" pin_num="P9" pin_signal="PIO4_27/LCD_D0/DBI_D0/TRACEDATA_3/FLEXIO_D7">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 14" pin_num="R9" pin_signal="PIO5_2/LCD_D7/DBI_D7/FC12_SSELN2/LOW_FREQ_CLKOUT/FLEXIO_D14">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="slew_rate" value="slow"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXIO0" signal="IO, 15" pin_num="R10" pin_signal="PIO5_3/LCD_D8/DBI_D8/FC12_SSELN3/LOW_FREQ_CLKOUT_N/FLEXIO_D15">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO5, 1" pin_num="M9" pin_signal="PIO5_1/LCD_D6/DBI_D6/FC12_RTS_SCL_SSELN1/FLEXIO_D13">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO5, 0" pin_num="P12" pin_signal="PIO5_0/LCD_D5/DBI_D5/FC12_CTS_SDA_SSELN0/FLEXIO_D12"/>
+                  <pin peripheral="GPIO" signal="PIO4, 31" pin_num="N10" pin_signal="PIO4_31/LCD_D4/DBI_D4/FC12_RXD_SDA_MOSI/FLEXIO_D11"/>
+               </pins>
+            </function>
+            <function name="BOARD_InitPsRamPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>cm33</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPsRamPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitPsRamPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_SCLK" pin_num="H2" pin_signal="PIO4_11/FC2_SCK/FLEXSPI1_SCLK/SD1_CLK">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA0" pin_num="H1" pin_signal="PIO4_12/FC2_TXD_SCL_MISO_WS/FLEXSPI1_DATA0/SD1_CMD">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA1" pin_num="G2" pin_signal="PIO4_13/FC2_RXD_SDA_MOSI_DATA/FLEXSPI1_DATA1/SD1_D0">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA2" pin_num="F1" pin_signal="PIO4_14/FC2_CTS_SDA_SSEL0/FLEXSPI1_DATA2/SD1_D1">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA3" pin_num="K3" pin_signal="PIO4_15/FC2_RTS_SCL_SSEL1/FLEXSPI1_DATA3/SD1_D2">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA4" pin_num="H5" pin_signal="PIO5_15/LCD_D20/FLEXSPI1_DATA4/FC4_CTS_SDA_SSEL0">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA5" pin_num="H4" pin_signal="PIO5_16/LCD_D21/FLEXSPI1_DATA5/FC4_RTS_SCL_SSEL1">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA6" pin_num="J3" pin_signal="PIO5_17/LCD_D22/FLEXSPI1_DATA6/FC4_SSEL2">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DATA7" pin_num="J4" pin_signal="PIO5_18/LCD_D23/FLEXSPI1_DATA7/FC4_SSEL3">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_DQS" pin_num="H3" pin_signal="PIO4_16/FC2_SSEL2/FLEXSPI1_DQS/SD1_D3">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="pupdsel" value="pullDown"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXSPI1" signal="FLEXSPI_SS0_N" pin_num="E13" pin_signal="PIO4_18/FLEXSPI1_SS0_N/SD1_D4/ADC0_6">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                        <pin_feature name="drive" value="full"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+            <function name="BOARD_InitMipiPanelPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>false</callFromInitBoot>
+                  <coreID>cm33</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitMipiPanelPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitMipiPanelPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIO" signal="PIO0, 12" pin_num="E14" pin_signal="PIO0_12/FC1_SSEL2/SCT0_GPI2/SCT0_OUT2/CTIMER_INP3/SEC_PIO0_12/ADC0_1">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO3, 21" pin_num="E5" pin_signal="PIO3_21/SD1_VOLT/LCD_D22/CTIMER4_MAT3/GPIO_INT_BMAT">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO3, 15" pin_num="E10" pin_signal="PIO3_15/SD1_D4/LCD_D16/CTIMER3_MAT1/FC5_SCK">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM4" signal="RXD_SDA_MOSI_DATA" pin_num="D14" pin_signal="PIO0_30/FC4_RXD_SDA_MOSI_DATA/CTIMER4_MAT2/I2S_BRIDGE_DATA_OUT/SEC_PIO0_30">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="pupdsel" value="pullUp"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="FLEXCOMM4" signal="TXD_SCL_MISO_WS" pin_num="B11" pin_signal="PIO0_29/FC4_TXD_SCL_MISO_WS/CTIMER4_MAT1/I2S_BRIDGE_WS_OUT/SEC_PIO0_29">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="pupdsel" value="pullUp"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO4, 4" pin_num="P17" pin_signal="PIO4_4/FC7_RTS_SCL_SSEL1/FC1_SCK"/>
+                  <pin peripheral="GPIO" signal="PIO3, 19" pin_num="C6" pin_signal="PIO3_19/SD1_CARD_DET_N/LCD_D20/CTIMER4_MAT1/MCLK">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO3, 18" pin_num="B6" pin_signal="PIO3_18/SD1_D7/LCD_D19/CTIMER4_MAT0/FC5_CTS_SDA_SSEL0">
+                     <pin_features>
+                        <pin_feature name="pupdena" value="enabled"/>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+            <function name="BOARD_InitPins">
+               <description>Configures pin routing and optionally pin electrical features.</description>
+               <options>
+                  <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>cm33</coreID>
+                  <enableClock>true</enableClock>
+               </options>
+               <dependencies>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Pins initialization requires the COMMON Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.lpc_iopctl" description="Pins initialization requires the LPC_IOPCTL Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <pins>
+                  <pin peripheral="GPIO" signal="PIO0, 14" pin_num="B12" pin_signal="PIO0_14/FC2_SCK/SCT0_GPI0/SCT0_OUT0/CTIMER2_MAT0/I2S_BRIDGE_CLK_IN/SEC_PIO0_14"/>
+                  <pin peripheral="GPIO" signal="PIO0, 10" pin_num="K16" pin_signal="PIO0_10/FC1_CTS_SDA_SSEL0/SCT0_GPI7/SCT0_OUT7/CTIMER1_MAT3/FC0_SSEL2/SEC_PIO0_10">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+                  <pin peripheral="GPIO" signal="PIO0, 25" pin_num="C12" pin_signal="PIO0_25/FC3_RTS_SCL_SSEL1/FREQME_GPIO_CLK/CTIMER_INP6/FC2_SSEL3/TRACEDATA_3/CLKIN/SEC_PIO0_25">
+                     <pin_features>
+                        <pin_feature name="ibena" value="enabled"/>
+                     </pin_features>
+                  </pin>
+               </pins>
+            </function>
+         </functions_list>
+      </pins>
+      <clocks name="Clocks" version="10.0" enabled="true" update_project_code="true">
+         <generated_project_files>
+            <file path="TargetSpecific/Drivers/clock_config.c" update_enabled="true"/>
+            <file path="TargetSpecific/Drivers/clock_config.h" update_enabled="true"/>
+         </generated_project_files>
+         <clocks_profile>
+            <processor_version>12.0.1</processor_version>
+         </clocks_profile>
+         <clock_configurations>
+            <clock_configuration name="BOARD_BootClockRUN" id_prefix="" prefix_user_defined="false">
+               <description></description>
+               <options/>
+               <dependencies>
+                  <dependency resourceType="PinSignal" resourceId="CLKCTL.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: CLKCTL.XTALIN, Clocks tool id: CLKCTL.XTALIN) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="CLKCTL.XTALIN" description="&apos;XTALIN&apos; (Pins tool id: CLKCTL.XTALIN, Clocks tool id: CLKCTL.XTALIN) needs to have &apos;INPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="direction" evaluation="">
+                        <data>INPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="CLKCTL.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: CLKCTL.XTALOUT, Clocks tool id: CLKCTL.XTALOUT) needs to be routed" problem_level="1" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="routed" evaluation="">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="PinSignal" resourceId="CLKCTL.XTALOUT" description="&apos;XTALOUT&apos; (Pins tool id: CLKCTL.XTALOUT, Clocks tool id: CLKCTL.XTALOUT) needs to have &apos;OUTPUT&apos; direction" problem_level="1" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="direction" evaluation="">
+                        <data>OUTPUT</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.common" description="Clocks initialization requires the COMMON Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.power" description="Clocks initialization requires the POWER Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+                  <dependency resourceType="SWComponent" resourceId="platform.drivers.clock" description="Clocks initialization requires the CLOCK Driver in the project." problem_level="2" source="Clocks:BOARD_BootClockRUN">
+                     <feature name="enabled" evaluation="equal" configuration="cm33">
+                        <data>true</data>
+                     </feature>
+                  </dependency>
+               </dependencies>
+               <clock_sources>
+                  <clock_source id="CLKCTL.XTAL.outFreq" value="24 MHz" locked="false" enabled="true"/>
+               </clock_sources>
+               <clock_outputs>
+                  <clock_output id="CLKOUT_clock.outFreq" value="960 kHz" locked="false" accuracy=""/>
+                  <clock_output id="FLEXSPI0_clock.outFreq" value="198 MHz" locked="false" accuracy=""/>
+                  <clock_output id="LPOSC1M_clock.outFreq" value="1 MHz" locked="false" accuracy=""/>
+                  <clock_output id="OSTIMER_clock.outFreq" value="1 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SYSTICK_clock.outFreq" value="198 MHz" locked="false" accuracy=""/>
+                  <clock_output id="System_clock.outFreq" value="198 MHz" locked="false" accuracy=""/>
+                  <clock_output id="TRACE_clock.outFreq" value="198 MHz" locked="false" accuracy=""/>
+                  <clock_output id="USBPHY_clock.outFreq" value="99 MHz" locked="false" accuracy=""/>
+                  <clock_output id="WAKE_32K_clock.outFreq" value="976.5625 Hz" locked="false" accuracy=""/>
+               </clock_outputs>
+               <clock_settings>
+                  <setting id="AUDIOPLL0_PFD0_CLK_GATE" value="Enabled" locked="false"/>
+                  <setting id="CLKCTL.A32KHZWAKECLKDIV.scale" value="32" locked="true"/>
+                  <setting id="CLKCTL.AUDIOPLL0CLKSEL.sel" value="CLKCTL.OSC_CLKSEL" locked="false"/>
+                  <setting id="CLKCTL.AUDIOPLL0_PFD0_DIV.scale" value="26" locked="true"/>
+                  <setting id="CLKCTL.AUDIOPLLCLKDIV.scale" value="15" locked="true"/>
+                  <setting id="CLKCTL.AUDIO_PLL0_PFD0_MUL.scale" value="18" locked="true"/>
+                  <setting id="CLKCTL.CLKOUTFCLKDIV.scale" value="100" locked="true"/>
+                  <setting id="CLKCTL.CLKOUTSEL0.sel" value="CLKCTL.FRO_DIV2_EN" locked="false"/>
+                  <setting id="CLKCTL.CLKOUTSEL1.sel" value="CLKCTL.CLKOUTSEL0" locked="false"/>
+                  <setting id="CLKCTL.DMIC0FCLKDIV.scale" value="1" locked="true"/>
+                  <setting id="CLKCTL.DSPCPUCLKDIV.scale" value="1" locked="true"/>
+                  <setting id="CLKCTL.FLEXSPI0FCLKDIV.scale" value="2" locked="true"/>
+                  <setting id="CLKCTL.FLEXSPI0FCLKSEL.sel" value="CLKCTL.MAINCLKSELB" locked="false"/>
+                  <setting id="CLKCTL.FRGPLLCLKDIV.scale" value="11" locked="true"/>
+                  <setting id="CLKCTL.I3C01FCLKSDIV.scale" value="1" locked="true"/>
+                  <setting id="CLKCTL.MAINCLKSELB.sel" value="CLKCTL.MAINPLLCLKDIV" locked="false"/>
+                  <setting id="CLKCTL.PFC0DIV.scale" value="2" locked="true"/>
+                  <setting id="CLKCTL.PFC1DIV.scale" value="4" locked="true"/>
+                  <setting id="CLKCTL.PLL0.denom" value="1" locked="true"/>
+                  <setting id="CLKCTL.PLL0.div" value="22" locked="true"/>
+                  <setting id="CLKCTL.PLL0.num" value="0" locked="false"/>
+                  <setting id="CLKCTL.PLL0_PFD0_DIV.scale" value="24" locked="true"/>
+                  <setting id="CLKCTL.PLL0_PFD0_MUL.scale" value="18" locked="true"/>
+                  <setting id="CLKCTL.PLL0_PFD2_DIV.scale" value="24" locked="true"/>
+                  <setting id="CLKCTL.PLL0_PFD2_MUL.scale" value="18" locked="true"/>
+                  <setting id="CLKCTL.PLL1.denom" value="27000" locked="true"/>
+                  <setting id="CLKCTL.PLL1.div" value="22" locked="true"/>
+                  <setting id="CLKCTL.PLL1.num" value="5040" locked="true"/>
+                  <setting id="CLKCTL.SYSCPUAHBCLKDIV.scale" value="2" locked="true"/>
+                  <setting id="CLKCTL.SYSPLL0CLKSEL.sel" value="CLKCTL.OSC_CLKSEL" locked="false"/>
+                  <setting id="CLKCTL.SYSTICKFCLKDIV.scale" value="2" locked="true"/>
+                  <setting id="CLKCTL.SYSTICKFCLKSEL.sel" value="CLKCTL.SYSTICKFCLKDIV" locked="false"/>
+                  <setting id="FRO_DIV16_EN_CFG" value="Enabled" locked="false"/>
+                  <setting id="FRO_DIV1_EN_CFG" value="Enabled" locked="false"/>
+                  <setting id="FRO_DIV2_EN_CFG" value="Enabled" locked="false"/>
+                  <setting id="FRO_DIV4_EN_CFG" value="Enabled" locked="false"/>
+                  <setting id="FRO_DIV8_EN_CFG" value="Enabled" locked="false"/>
+                  <setting id="PLL0_PFD0_CLK_GATE" value="Enabled" locked="false"/>
+                  <setting id="PLL0_PFD2_CLK_GATE" value="Enabled" locked="false"/>
+                  <setting id="SYSCTL_PDRUNCFG_AUDIOPLL_CFG" value="No" locked="false"/>
+                  <setting id="SYSCTL_PDRUNCFG_SYSPLL_CFG" value="No" locked="false"/>
+                  <setting id="SYSCTL_PDRUNCFG_SYSXTAL_CFG" value="Power_up" locked="false"/>
+                  <setting id="XTAL_LP_Enable" value="LowPowerMode" locked="false"/>
+               </clock_settings>
+               <called_from_default_init>true</called_from_default_init>
+            </clock_configuration>
+         </clock_configurations>
+      </clocks>
+      <dcdx name="DCDx" version="3.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <dcdx_profile>
+            <processor_version>N/A</processor_version>
+         </dcdx_profile>
+         <dcdx_configurations/>
+      </dcdx>
+      <periphs name="Peripherals" version="10.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <peripherals_profile>
+            <processor_version>N/A</processor_version>
+         </peripherals_profile>
+         <functional_groups/>
+         <components/>
+      </periphs>
+      <tee name="TEE" version="4.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
+         <tee_profile>
+            <processor_version>N/A</processor_version>
+         </tee_profile>
+      </tee>
+   </tools>
+</configuration>

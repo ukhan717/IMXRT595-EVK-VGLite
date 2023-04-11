@@ -1,0 +1,109 @@
+﻿$version 12.00
+
+// This unit is a part of the Embedded Wizard framework 'Mosaic'
+$rect <40,70,240,110>
+unit Core
+{
+  attr Directory = $Mosaic;
+}
+
+// This unit is a part of the Embedded Wizard framework 'Mosaic'
+$rect <40,110,240,150>
+unit Resources
+{
+  attr Directory = $Mosaic;
+}
+
+// This unit is a part of the Embedded Wizard framework 'Mosaic'
+$rect <40,150,240,190>
+unit Graphics
+{
+  attr Directory = $Mosaic;
+}
+
+// This unit is a part of the Embedded Wizard framework 'Mosaic'
+$rect <40,190,240,230>
+unit Effects
+{
+  attr Directory = $Mosaic;
+}
+
+// This unit is a part of the Embedded Wizard framework 'Mosaic'
+$rect <40,230,240,270>
+unit Views
+{
+  attr Directory = $Mosaic;
+}
+
+// The 'default' Language. Each project has to contain at least one language brick \
+// called 'Default'
+$rect <540,120,740,160>
+language Default;
+
+// This unit is intended to contain the application class and another GUI components.
+$rect <530,230,730,270>
+unit Application
+{
+  attr Directory = .\;
+}
+
+// Mosaic Framework
+note group Note1
+{
+  attr Bounds = <20,20,260,290>;
+}
+
+// Configuration for the target code generation
+note group Note2
+{
+  attr Bounds = <270,20,510,180>;
+}
+
+// The default language identifier
+note group Note3
+{
+  attr Bounds = <520,20,760,180>;
+}
+
+// The example 'AnalogWatches' shows the implementation of several analog watches.
+// 
+// The unit 'Watch' contains the resources and the implementations of the different \
+// analog watches.
+// The unit 'Application' contains only a simple application class to present the \
+// different watches.
+note legend Note4
+{
+  attr Bounds = <20,300,760,410>;
+}
+
+// Unit containing different types of watches and their resources.
+$rect <290,230,490,270>
+unit Watch
+{
+  attr Directory = .\;
+}
+
+// Implementation of analog watches and application code
+note group Note
+{
+  attr Bounds = <270,190,760,290>;
+}
+
+// This is a profile member for the project. This profile controls the code generation \
+// for the target system.
+$rect <290,120,490,160>
+profile iMX_RT : NXP.iMX_RT_VGLite.RGB565
+{
+  attr ScreenSize = <390,390>;
+  attr Optimization = High;
+  attr ApplicationClass = Application::Application;
+  attr OutputDirectory = ..\..\..\Application\GeneratedCode;
+  attr CleanOutputDirectories = true;
+  attr OutputFileNameExtension = c;
+  attr ScreenOrientation = Normal;
+  attr Verbose = false;
+  attr FontConversion = Windows;
+
+  $rect <10,10,154,50>
+  macro Author = "Dipl. Ing. Paul Banach and Dipl. Ing. Manfred Schweyer, Copyright (C) TARA Systems GmbH";
+}

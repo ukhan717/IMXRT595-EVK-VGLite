@@ -1,0 +1,51 @@
+﻿$version 12.00
+
+// This is the root component of the entire GUI application.
+$rect <20,20,220,60>
+$output false
+class Application : Core::Root
+{
+  $rect <410,0,610,40>
+  inherited property Bounds = <0,0,390,390>;
+
+  $rect <620,0,820,40>
+  inherited method Init()
+  {
+    /* add a round mask for composer to get an impression of a round display... */
+    $if $prototyper
+
+    var Views::Image mask = new Views::Image;
+    mask.Bitmap = Application::RoundMask;
+    mask.Color = #444444C0;
+    mask.Bounds = Bounds.orect;
+    Add( mask, 0 );
+
+    $endif
+  }
+
+  // This is a filled rectangle view.
+  $rect <20,20,160,60>
+  object Views::Rectangle Background
+  {
+    preset Bounds = <0,0,390,390>;
+    preset Color = #000000FF;
+  }
+
+  $rect <20,20,160,60>
+  object Watch::Watch Watch
+  {
+    preset Bounds = <0,0,390,390>;
+  }
+}
+
+$rect <230,20,430,60>
+$output false
+resource Resources::Bitmap RoundMask
+{
+  attr bitmapfile FileName = .\Res\390x390Mask.png;
+  attr framesize FrameSize;
+  attr framedelay FrameDelay;
+  attr bitmapformat Format = Alpha8;
+  attr bitmapdithering Dithering = Auto;
+  attr bitmapmode Mode = Default;
+}
