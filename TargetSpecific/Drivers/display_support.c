@@ -13,10 +13,12 @@
 #include "fsl_dma.h"
 #include "fsl_inputmux.h"
 #elif ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL) || (DEMO_PANEL_RK055IQH091 == DEMO_PANEL) || \
-       (DEMO_PANEL_RK055MHD091 == DEMO_PANEL))
+       (DEMO_PANEL_RK055MHD091 == DEMO_PANEL) || (DMB_PANEL == DEMO_PANEL))
 #include "fsl_dc_fb_lcdif.h"
 #if (DEMO_PANEL_RK055AHD091 == DEMO_PANEL)
 #include "fsl_rm68200.h"
+#elif (DMB_PANEL == DEMO_PANEL)
+#include "dmb_sc1/dmb_sc1.h"
 #elif (DEMO_PANEL_RK055IQH091 == DEMO_PANEL)
 #include "fsl_rm68191.h"
 #elif (DEMO_PANEL_RK055MHD091 == DEMO_PANEL)
@@ -281,7 +283,7 @@ status_t BOARD_PrepareDisplayController(void)
     return kStatus_Success;
 }
 
-#elif ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL) || (DEMO_PANEL_RK055IQH091 == DEMO_PANEL) || \
+#elif ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL)  || (DMB_PANEL == DEMO_PANEL) || (DEMO_PANEL_RK055IQH091 == DEMO_PANEL) || \
        (DEMO_PANEL_RK055MHD091 == DEMO_PANEL))
 
 #if BOARD_ENABLE_PSRAM_CACHE
@@ -325,8 +327,16 @@ status_t BOARD_PrepareDisplayController(void)
 #define DEMO_LCDIF_VFP 16
 #define DEMO_LCDIF_VBP 14
 
-#elif (DEMO_PANEL_RK055MHD091 == DEMO_PANEL)
+#elif (DEMO_PANEL == DMB_PANEL)
 
+#define DEMO_LCDIF_HSW 14 //2min // 16
+#define DEMO_LCDIF_HFP 38
+#define DEMO_LCDIF_HBP 28 // 4min // 32
+#define DEMO_LCDIF_VSW 5//4
+#define DEMO_LCDIF_VFP 10//8
+#define DEMO_LCDIF_VBP 5//4
+
+#elif (DEMO_PANEL_RK055MHD091 == DEMO_PANEL)
 #define DEMO_LCDIF_HSW 6
 #define DEMO_LCDIF_HFP 12
 #define DEMO_LCDIF_HBP 24
@@ -343,7 +353,12 @@ status_t BOARD_PrepareDisplayController(void)
 
 /* Definitions for MIPI. */
 #define DEMO_MIPI_DSI          MIPI_DSI_HOST
-#define DEMO_MIPI_DSI_LANE_NUM 2
+#if (DMB_PANEL == DEMO_PANEL)
+#define DEMO_MIPI_DSI_LANE_NUM 1 // 1
+#else
+#define DEMO_MIPI_DSI_LANE_NUM 2 // 1
+#endif
+
 
 /*******************************************************************************
  * Prototypes
@@ -379,6 +394,25 @@ static const rm68200_resource_t rm68200Resource = {
 static display_handle_t rm68200Handle = {
     .resource = &rm68200Resource,
     .ops      = &rm68200_ops,
+};
+
+
+#elif (DEMO_PANEL == DMB_PANEL)
+
+static mipi_dsi_device_t dsiDevice = {
+    .virtualChannel = 0,
+    .xferFunc       = BOARD_DSI_Transfer,
+};
+
+static const dmb_resource_t dmbResource = {
+    .dsiDevice    = &dsiDevice,
+    .pullResetPin = BOARD_PullPanelResetPin,
+    .pullPowerPin = BOARD_PullPanelPowerPin,
+};
+
+static display_handle_t dmbSc1Handle = {
+    .resource = &dmbResource,
+    .ops      = &dmb_sc1_ops,
 };
 
 #elif (DEMO_PANEL == DEMO_PANEL_RK055MHD091)
@@ -489,7 +523,11 @@ static void BOARD_InitLcdifClock(void)
      * RK055AHD091: 35Hz
      */
     CLOCK_AttachClk(kAUX0_PLL_to_DCPIXEL_CLK);
-    CLOCK_SetClkDiv(kCLOCK_DivDcPixelClk, 11);
+#if (DMB_PANEL == DEMO_PANEL)
+    CLOCK_SetClkDiv(kCLOCK_DivDcPixelClk, 33);
+#else
+    CLOCK_SetClkDiv(kCLOCK_DivDcPixelClk, 11);//CLOCK_SetClkDiv(kCLOCK_DivDcPixelClk, 50); for 60Hz
+#endif
 
     mipiDsiDpiClkFreq_Hz = CLOCK_GetDcPixelClkFreq();
 
@@ -527,8 +565,13 @@ static void BOARD_InitMipiDsiClock(void)
      * system pll clock is 528MHz defined in clock_config.c
      */
     CLOCK_AttachClk(kAUX1_PLL_to_MIPI_DPHY_CLK);
+#if (DMB_PANEL == DEMO_PANEL)
+    CLOCK_InitSysPfd(kCLOCK_Pfd3, 16);
+    CLOCK_SetClkDiv(kCLOCK_DivDphyClk, 2);
+#else
     CLOCK_InitSysPfd(kCLOCK_Pfd3, 18);
-    CLOCK_SetClkDiv(kCLOCK_DivDphyClk, 1);
+    CLOCK_SetClkDiv(kCLOCK_DivDphyClk, 1); //     CLOCK_SetClkDiv(kCLOCK_DivDphyClk, 10);
+#endif
     mipiDsiDphyBitClkFreq_Hz = CLOCK_GetMipiDphyClkFreq();
 }
 
@@ -559,6 +602,8 @@ static status_t BOARD_InitLcdPanel(void)
 
 #if (DEMO_PANEL == DEMO_PANEL_RK055AHD091)
     status = RM68200_Init(&rm68200Handle, &displayConfig);
+#elif (DEMO_PANEL == DMB_PANEL)
+    status = dmb_Init(&dmbSc1Handle, &displayConfig);
 #elif (DEMO_PANEL == DEMO_PANEL_RK055MHD091)
     status = HX8394_Init(&hx8394Handle, &displayConfig);
 #else
@@ -670,7 +715,7 @@ status_t BOARD_PrepareDisplayController(void)
 
 /* Definitions for MIPI. */
 #define DEMO_MIPI_DSI          MIPI_DSI_HOST
-#define DEMO_MIPI_DSI_LANE_NUM 1
+#define DEMO_MIPI_DSI_LANE_NUM 1 // LANES
 #define DEMO_MIPI_DSI_IRQn     MIPI_IRQn
 
 /*

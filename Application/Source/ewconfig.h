@@ -78,10 +78,11 @@
 #define DEMO_PANEL_RK055AHD091 1 /* NXP "RK055HDMIPI4M" MIPI Rectangular Display  */
 #define DEMO_PANEL_RK055IQH091 2 /* NXP RESERVED                                  */
 #define DEMO_PANEL_RM67162     3 /* NXP "G1120B0MIPI" MIPI Circular Display       */
+#define DMB_PANEL 			   4 /* SC1 Rectangular Display  */
 
-#define DEMO_PANEL DEMO_PANEL_RM67162
+#define DEMO_PANEL DMB_PANEL // DEMO_PANEL_RM67162 //
 
-#if DEMO_PANEL == DEMO_PANEL_RM67162
+#if (DEMO_PANEL == DEMO_PANEL_RM67162) || (DMB_PANEL == DEMO_PANEL)
   #if EW_FRAME_BUFFER_COLOR_FORMAT == EW_FRAME_BUFFER_COLOR_FORMAT_RGB565
     #define DEMO_RM67162_USE_RG565    1
     #define DEMO_RM67162_USE_XRGB8888 0
@@ -160,6 +161,12 @@
 
   #define EW_FRAME_BUFFER_WIDTH           400
   #define EW_FRAME_BUFFER_HEIGHT          390
+#elif DEMO_PANEL == DMB_PANEL
+  #define EW_DISPLAY_WIDTH                320
+  #define EW_DISPLAY_HEIGHT               480
+
+  #define EW_FRAME_BUFFER_WIDTH           320
+  #define EW_FRAME_BUFFER_HEIGHT          480
 #else
   #error Selected display panel not supported!
 #endif

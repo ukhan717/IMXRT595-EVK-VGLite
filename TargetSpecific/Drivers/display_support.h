@@ -19,11 +19,12 @@
 #define DEMO_PANEL_RK055IQH091 2 /* NXP RESERVED                                  */
 #define DEMO_PANEL_RM67162     3 /* NXP "G1120B0MIPI" MIPI Circular Display       */
 #define DEMO_PANEL_RK055MHD091 4 /* NXP "RK055MHD091A0-CTG MIPI Rectangular Display  */
+//#define DMB_PANEL 			   5 /* SC1 Rectangular Display  */
 
 /* @TEST_ANCHOR */
 
 #ifndef DEMO_PANEL
-#define DEMO_PANEL DEMO_PANEL_RM67162
+#define DEMO_PANEL DMB_PANEL // DEMO_PANEL_RM67162
 #endif
 
 #if (DEMO_PANEL_TFT_PROTO_5 == DEMO_PANEL)
@@ -79,7 +80,7 @@
 #error Currently only support FLEXIO MCULCD SMARTDMA
 #endif
 
-#elif ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL) || (DEMO_PANEL_RK055IQH091 == DEMO_PANEL) || \
+#elif ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL)  || (DMB_PANEL == DEMO_PANEL) || (DEMO_PANEL_RK055IQH091 == DEMO_PANEL) || \
        (DEMO_PANEL_RK055MHD091 == DEMO_PANEL))
 
 #define DEMO_BUFFER_FIXED_ADDRESS 1
@@ -97,7 +98,7 @@
 #define DEMO_BUFFER_COUNT         2   /* 2 is enough for DPI interface display. */
 #define FRAME_BUFFER_ALIGN        128 /* LCDIF buffer should be 128 byte aligned. */
 
-#if ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL) || (DEMO_PANEL_RK055MHD091 == DEMO_PANEL))
+#if ((DEMO_PANEL_RK055AHD091 == DEMO_PANEL) || (DEMO_PANEL_RK055MHD091 == DEMO_PANEL) || (DMB_PANEL == DEMO_PANEL))
 
 #ifndef DEMO_RK055AHD091_USE_XRGB8888
 #define DEMO_RK055AHD091_USE_XRGB8888 0
@@ -116,6 +117,14 @@
 #define DEMO_BUFFER_PIXEL_FORMAT   kVIDEO_PixelFormatXRGB8888
 #define DEMO_BUFFER_BYTE_PER_PIXEL 4
 
+#elif (DMB_PANEL == DEMO_PANEL)
+/* Frame buffer #0 is 240 x 400 x 2 = 4B00 bytes long , 320*480*2 = 4B000 */
+#define DEMO_BUFFER0_ADDR 0x28000000U // check this?
+#define DEMO_BUFFER1_ADDR 0x28050000U // 0x28004B00U //0x28050000U
+
+#define DEMO_BUFFER_PIXEL_FORMAT   kVIDEO_PixelFormatRGB565 // pixel format chosen here
+#define DEMO_BUFFER_BYTE_PER_PIXEL 2
+
 #else
 
 /* Frame buffer #0 is 720 x 1280 x 2 = 0x1C2000 bytes long */
@@ -127,8 +136,13 @@
 
 #endif
 
-#define DEMO_PANEL_WIDTH  (720)
-#define DEMO_PANEL_HEIGHT (1280)
+#if (DMB_PANEL == DEMO_PANEL)
+#define DEMO_PANEL_WIDTH  (320) //(240)// 720
+#define DEMO_PANEL_HEIGHT (480) //(400)// 1280
+#else
+#define DEMO_PANEL_WIDTH  (720) //(240)// 720
+#define DEMO_PANEL_HEIGHT (1280) //(400)// 1280
+#endif
 
 #elif (DEMO_PANEL_RK055IQH091 == DEMO_PANEL)
 

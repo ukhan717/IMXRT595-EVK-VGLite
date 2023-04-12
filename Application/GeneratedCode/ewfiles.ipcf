@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- IAR Project Connection File --> 
+<iarProjectConnection version="1.6" name="EmbeddedWizard" oneShot="false" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="IarProjectConnection_1.6.xsd"> 
+  <includePath> 
+     <path>$PROJ_DIR$\..\..\..\PlatformPackage\RTE</path>  
+  </includePath> 
+  <defines> 
+    <define>EW_SURFACE_ROTATION=0</define> 
+    <define>EW_FRAME_BUFFER_COLOR_FORMAT=EW_FRAME_BUFFER_COLOR_FORMAT_RGB565</define> 
+  </defines> 
+  <files> 
+    <group name="GeneratedCode"> 
+      <path>Application.c</path>  
+      <path>Core.c</path>  
+      <path>Effects.c</path>  
+      <path>Graphics.c</path>  
+      <path>Resources.c</path>  
+      <path>Views.c</path>  
+      <path>_ApplicationFontLarge.h</path>  
+      <path>_ApplicationFontSmall.h</path>  
+      <path>_ApplicationLogo.h</path>  
+    </group> 
+    <group name="RTE"> 
+      <path>../../PlatformPackage/RTE/ewextrte.c</path>  
+      <path>../../PlatformPackage/RTE/libewrte-m33-iar.a</path>  
+    </group> 
+    <group name="RGB565"> 
+      <path>../../PlatformPackage/RGB565/libewgfx-m33-iar.a</path>  
+    </group> 
+    <group name="Header Files"> 
+    </group> 
+    <group name="Library Files"> 
+    </group> 
+    <group name="Documentation" build="false"> 
+    </group> 
+  </files> 
+</iarProjectConnection> 

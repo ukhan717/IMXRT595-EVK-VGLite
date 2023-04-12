@@ -39,9 +39,9 @@
 
 #include "fsl_gpio.h"
 
-#if (DEMO_PANEL == DEMO_PANEL_RM67162)
+#if (DEMO_PANEL == DEMO_PANEL_RM67162 || (DMB_PANEL == DEMO_PANEL))
 #include "fsl_ft3267.h"
-#elif (DEMO_PANEL == DEMO_PANEL_TFT_PROTO_5)
+#elif (DEMO_PANEL == DEMO_PANEL_TFT_PROTO_5 )
 #include "fsl_i2c.h"
 #include "fsl_ft5406.h"
 #else
@@ -70,7 +70,7 @@ static unsigned char TouchState     =  EW_BSP_TOUCH_IDLE;
 static int           IsInitalized   =  0;
 static XTouchEvent   TouchEvent[ NO_OF_FINGERS ];
 
-#if (DEMO_PANEL == DEMO_PANEL_RM67162)
+#if (DEMO_PANEL == DEMO_PANEL_RM67162 || (DMB_PANEL == DEMO_PANEL))
 
 static ft3267_handle_t TouchHandle;
 
