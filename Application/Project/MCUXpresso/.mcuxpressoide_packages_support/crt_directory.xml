@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?debugstack-directory version="1.0"?>
+<directory xmlns:xi="http://www.w3.org/2001/XInclude">
+   <xi:include href="file:/C:/WorkSpace/Documentation/SC1/NXP/SDKs/IMXRT595-EVK-VGLite/Application/Project/MCUXpresso/.mcuxpressoide_packages_support/MIMXRT595S_support/MIMXRT500_dir_part.xml"/>
+</directory>

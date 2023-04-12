@@ -1223,6 +1223,12 @@
             </file>
         </group>
         <file>
+            <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\dmb_sc1\dmb_sc1.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\dmb_sc1\dmb_sc1.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\uart\fsl_adapter_usart.c</name>
         </file>
         <file>
@@ -1248,6 +1254,12 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\dc\dsi_cmd\fsl_dc_fb_dsi_cmd.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\fsl_dc_fb_lcdif.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\fsl_dc_fb_lcdif.h</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\components\video\display\dc\ssd1963\fsl_dc_fb_ssd1963.c</name>
@@ -1290,6 +1302,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_inputmux.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_lcdif.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_mipi_dsi.c</name>
@@ -1336,25 +1351,13 @@
         <group>
             <name>GeneratedCode</name>
             <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_ResourcesFontExtraLarge.h</name>
+                <name>$PROJ_DIR$\..\..\GeneratedCode\_ApplicationFontLarge.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_ResourcesFontMedium.h</name>
+                <name>$PROJ_DIR$\..\..\GeneratedCode\_ApplicationFontSmall.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_ResourcesFontSmall.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_ResourcesSymbolIconsLarge.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_WidgetSetCheckBoxMedium.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_WidgetSetHorizontalValueBarMedium.h</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\_WidgetSetPushButtonMedium.h</name>
+                <name>$PROJ_DIR$\..\..\GeneratedCode\_ApplicationLogo.h</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\GeneratedCode\Application.c</name>
@@ -1373,9 +1376,6 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\..\GeneratedCode\Views.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\..\GeneratedCode\WidgetSet.c</name>
             </file>
         </group>
         <group>

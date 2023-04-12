@@ -1,0 +1,34 @@
+C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\IMXRT595-EVK-VGLite\BrowseInfo\Drivers\fsl_mipi_dsi_cmd.pbi: \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\ThirdParty\MCUXpressoSDK\components\video\display\mipi_dsi_cmd\fsl_mipi_dsi_cmd.c \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\ThirdParty\MCUXpressoSDK\components\video\display\mipi_dsi_cmd\fsl_mipi_dsi_cmd.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_common.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\assert.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\ycheck.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\yvals.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\DLib_Config_Normal.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\stdbool.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\stdint.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\ysizet.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\DLib_Product_string.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\DLib_Product_stdlib.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\stddef.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\fsl_device_registers.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\MIMXRT595S_cm33.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\CMSIS\Core\Include\core_cm33.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\CMSIS\Core\Include\cmsis_version.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\CMSIS\Core\Include\cmsis_compiler.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\CMSIS\Core\Include\cmsis_iccarm.h \
+  C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.1_2\arm\inc\c\aarch32\iccarm_builtin.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\CMSIS\Core\Include\mpu_armv8.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\system_MIMXRT595S_cm33.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\MIMXRT595S_cm33_features.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_common_arm.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_clock.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_reset.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_common.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_mipi_dsi.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\ThirdParty\MCUXpressoSDK\devices\MIMXRT595S\drivers\fsl_soc_mipi_dsi.h

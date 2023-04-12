@@ -96,7 +96,7 @@ static const XStringRes _Const0009 = { _StringsDefault0, 0x0089 };
 #endif
 
 /* Global constant containing the preferred size of the screen in pixel. */
-const XPoint EwScreenSize = { 320, 480 };
+const XPoint EwScreenSize = { 390, 390 };
 
 /* Global constant containing the main application class. */
 const XClass EwApplicationClass = EW_CLASS( ApplicationApplication );

@@ -1,0 +1,9 @@
+C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\IMXRT595-EVK-VGLite\BrowseInfo\Application\main.pbi: \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Source\main.c \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Source\ewmain.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\PlatformPackage\RTE\ewrte.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Source\ewconfig.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Source\ewdef.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\TargetSpecific\ew_bsp_system.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\TargetSpecific\ew_bsp_console.h \
+  C:\WorkSpace\Documentation\SC1\NXP\SDKs\IMXRT595-EVK-VGLite\Application\Project\EWARM\..\..\..\TargetSpecific\ew_bsp_os.h

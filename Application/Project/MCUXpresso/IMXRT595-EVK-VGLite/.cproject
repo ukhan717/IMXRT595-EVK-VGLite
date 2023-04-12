@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?fileVersion 4.0.0?>
-<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
 	<storageModule moduleId="org.eclipse.cdt.core.settings">
 		<cconfiguration id="com.crt.advproject.config.exe.debug.40124547">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.crt.advproject.config.exe.debug.40124547" moduleId="org.eclipse.cdt.core.settings" name="BUILD">
@@ -109,8 +108,8 @@
 									<listOptionValue builtIn="false" value="VG_BLIT_WORKAROUND=1"/>
 									<listOptionValue builtIn="false" value="EW_USE_VGLITE_INDEX8=1"/>
 									<listOptionValue builtIn="false" value="EW_USE_OPERATING_SYSTEM=1"/>
-                  <listOptionValue builtIn="false" value="EW_FRAME_BUFFER_COLOR_FORMAT=EW_FRAME_BUFFER_COLOR_FORMAT_RGB565" />
-									<listOptionValue builtIn="false" value="EW_SURFACE_ROTATION=0" />
+									<listOptionValue builtIn="false" value="EW_FRAME_BUFFER_COLOR_FORMAT=EW_FRAME_BUFFER_COLOR_FORMAT_RGB565"/>
+									<listOptionValue builtIn="false" value="EW_SURFACE_ROTATION=0"/>
 								</option>
 								<option id="com.crt.advproject.gcc.fpu.380695325" name="Floating point" superClass="com.crt.advproject.gcc.fpu" useByScannerDiscovery="true" value="com.crt.advproject.gcc.fpu.fpv5sp.hard" valueType="enumerated"/>
 								<option id="com.crt.advproject.gcc.thumb.2007705862" name="Thumb mode" superClass="com.crt.advproject.gcc.thumb" useByScannerDiscovery="false" value="true" valueType="boolean"/>
@@ -157,7 +156,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../ThirdParty\MCUXpressoSDK\components\ft3267&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/TargetSpecific/Drivers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RTE&quot;"/>
-                  <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RGB565&quot;" />
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RGB565&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.files.1459438681" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.637497133" name="Optimization Level" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" useByScannerDiscovery="true"/>
@@ -303,8 +302,8 @@
 									<listOptionValue builtIn="false" value="ewrte-m33-gcc"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.1818513943" name="Library search path (-L)" superClass="gnu.c.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RGB565&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RTE&quot;"/>
-                  <listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../../PlatformPackage/RGB565&quot;" />
 								</option>
 								<option id="gnu.c.link.option.ldflags.2066506252" name="Linker flags" superClass="gnu.c.link.option.ldflags" useByScannerDiscovery="false"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.other.1240962424" name="Other options (-Xlinker [option])" superClass="gnu.c.link.option.other" useByScannerDiscovery="false" valueType="stringList">
@@ -359,7 +358,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-            <entry excluding="PlatformPackage/RGBA8888" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="" />
+						<entry excluding="PlatformPackage/RGBA8888" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -388,7 +387,7 @@
 	<storageModule moduleId="com.nxp.mcuxpresso.core.datamodels">
 		<sdkName>SDK_2.x_EVK-MIMXRT595</sdkName>
 		<sdkExample>IMXRT595-EVK-VGLite</sdkExample>
-		<sdkVersion>2.11.0</sdkVersion>
+		<sdkVersion>2.13.0</sdkVersion>
 		<sdkComponents>platform.drivers.flexio.MIMXRT595S;platform.drivers.flexio_mculcd.MIMXRT595S;platform.drivers.lpc_dma.MIMXRT595S;driver.ssd1963.MIMXRT595S;platform.drivers.clock.MIMXRT595S;platform.drivers.lpc_gpio.MIMXRT595S;driver.dbi.MIMXRT595S;driver.dbi_flexio_smartdma.MIMXRT595S;driver.dc-fb-ssd1963.MIMXRT595S;platform.drivers.power.MIMXRT595S;middleware.freertos-kernel.cm33_nonsecure_port.MIMXRT595S;platform.drivers.inputmux.MIMXRT595S;platform.drivers.flexio_mculcd_smartdma.MIMXRT595S;middleware.vglite.MIMXRT595S;middleware.freertos-kernel.heap_4.MIMXRT595S;driver.dc-fb-lcdif.MIMXRT595S;driver.display-common.MIMXRT595S;driver.display-rm68191.MIMXRT595S;platform.drivers.mipi_dsi.MIMXRT595S;platform.drivers.lcdif.MIMXRT595S;driver.display-mipi-dsi-cmd.MIMXRT595S;platform.drivers.common.MIMXRT595S;driver.display-rm68200.MIMXRT595S;driver.display-rm67162.MIMXRT595S;driver.dc-fb-dsi-cmd.MIMXRT595S;platform.drivers.mipi_dsi_smartdma.MIMXRT595S;driver.fbdev.MIMXRT595S;driver.video-common.MIMXRT595S;platform.drivers.reset.MIMXRT595S;device.MIMXRT595S_CMSIS.MIMXRT595S;utility.debug_console.MIMXRT595S;platform.utilities.assert.MIMXRT595S;component.usart_adapter.MIMXRT595S;platform.drivers.flexspi.MIMXRT595S;platform.drivers.cache_cache64.MIMXRT595S;component.serial_manager.MIMXRT595S;component.lists.MIMXRT595S;component.serial_manager_uart.MIMXRT595S;platform.drivers.flexcomm_usart.MIMXRT595S;platform.drivers.flash_config.MIMXRT595S;device.MIMXRT595S_startup.MIMXRT595S;platform.drivers.flexcomm.MIMXRT595S;platform.drivers.lpc_iopctl.MIMXRT595S;CMSIS_Include_core_cm.MIMXRT595S;platform.drivers.lpc_smartdma.MIMXRT595S;driver.dc-fb-common.MIMXRT595S;middleware.freertos-kernel.MIMXRT595S;middleware.freertos-kernel.extension.MIMXRT595S;platform.drivers.inputmux_connections.MIMXRT595S;platform.drivers.soc_mipi_dsi.MIMXRT595S;platform.utilities.misc_utilities.MIMXRT595S;platform.drivers.iap.MIMXRT595S;IMXRT595-EVK-VGLite;</sdkComponents>
 		<boardId>evkmimxrt595</boardId>
 		<package>MIMXRT595SFFOC</package>
@@ -396,48 +395,27 @@
 		<coreId>cm33_MIMXRT595S</coreId>
 	</storageModule>
 	<storageModule moduleId="com.crt.config">
-    <projectStorage>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-
-&lt;TargetConfig&gt;
-
-&lt;Properties property_3="NXP" property_4="MIMXRT595S" property_count="5" version="100300"/&gt;
-
-&lt;infoList vendor="NXP"&gt;
-
-&lt;info chip="MIMXRT595S" name="MIMXRT595S"&gt;
-
-&lt;chip&gt;
-
-&lt;name&gt;MIMXRT595S&lt;/name&gt;
-
-&lt;family&gt;MIMXRT500&lt;/family&gt;
-
-&lt;vendor&gt;NXP&lt;/vendor&gt;
-
-&lt;memory can_program="true" id="Flash" is_ro="true" size="0" type="Flash"/&gt;
-
-&lt;memory id="RAM" size="5120" type="RAM"/&gt;
-
-&lt;memoryInstance derived_from="Flash" driver="MIMXRT500_SFDP_MXIC_OSPI.cfx" edited="true" id="QSPI_FLASH" location="0x8000000" size="0x4000000"/&gt;
-
-&lt;memoryInstance derived_from="RAM" edited="true" id="SRAM" location="0x20080000" size="0x480000"/&gt;
-
-&lt;memoryInstance derived_from="RAM" edited="true" id="USB_RAM" location="0x40140000" size="0x4000"/&gt;
-
-&lt;/chip&gt;
-
-&lt;processor&gt;
-
-&lt;name gcc_name="cortex-m33"&gt;Cortex-M33&lt;/name&gt;
-
-&lt;family&gt;Cortex-M&lt;/family&gt;
-
-&lt;/processor&gt;
-
-&lt;/info&gt;
-
-&lt;/infoList&gt;
-
+		<projectStorage>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#13;
+&lt;TargetConfig&gt;&#13;
+&lt;Properties property_3="NXP" property_4="MIMXRT595S" property_count="5" version="100300"/&gt;&#13;
+&lt;infoList vendor="NXP"&gt;&#13;
+&lt;info chip="MIMXRT595S" name="MIMXRT595S"&gt;&#13;
+&lt;chip&gt;&#13;
+&lt;name&gt;MIMXRT595S&lt;/name&gt;&#13;
+&lt;family&gt;MIMXRT500&lt;/family&gt;&#13;
+&lt;vendor&gt;NXP&lt;/vendor&gt;&#13;
+&lt;memory can_program="true" id="Flash" is_ro="true" size="0" type="Flash"/&gt;&#13;
+&lt;memory id="RAM" size="5120" type="RAM"/&gt;&#13;
+&lt;memoryInstance derived_from="Flash" driver="MIMXRT500_SFDP_MXIC_OSPI.cfx" edited="true" id="QSPI_FLASH" location="0x8000000" size="0x4000000"/&gt;&#13;
+&lt;memoryInstance derived_from="RAM" edited="true" id="SRAM" location="0x20080000" size="0x480000"/&gt;&#13;
+&lt;memoryInstance derived_from="RAM" edited="true" id="USB_RAM" location="0x40140000" size="0x4000"/&gt;&#13;
+&lt;/chip&gt;&#13;
+&lt;processor&gt;&#13;
+&lt;name gcc_name="cortex-m33"&gt;Cortex-M33&lt;/name&gt;&#13;
+&lt;family&gt;Cortex-M&lt;/family&gt;&#13;
+&lt;/processor&gt;&#13;
+&lt;/info&gt;&#13;
+&lt;/infoList&gt;&#13;
 &lt;/TargetConfig&gt;</projectStorage>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

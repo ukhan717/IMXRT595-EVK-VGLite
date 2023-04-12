@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE infoList
+  SYSTEM "crt_infolist.dtd">
+<infoList vendor="NXP">
+   <info name="MIMXRT595S" chip="MIMXRT595S">
+      <chip>
+         <name>MIMXRT595S</name>
+         <family>MIMXRT500</family>
+         <vendor>NXP</vendor>
+         <memory id="Flash"
+                 type="Flash"
+                 size="0"
+                 is_ro="true"
+                 can_program="true"/>
+         <memory id="RAM" type="RAM" size="5120"/>
+         <memoryInstance id="SRAM"
+                         derived_from="RAM"
+                         location="0x00280000"
+                         size="0x00280000"/>
+         <memoryInstance id="SRAM_ROM"
+                         derived_from="RAM"
+                         location="0x00000000"
+                         size="0x00020000"/>
+         <memoryInstance id="SRAM_SHARED"
+                         derived_from="RAM"
+                         location="0x00020000"
+                         size="0x00060000"/>
+         <memoryInstance id="SRAM_DSP"
+                         derived_from="RAM"
+                         location="0x00080000"
+                         size="0x00200000"/>
+         <memoryInstance id="USB_RAM"
+                         derived_from="RAM"
+                         location="0x40140000"
+                         size="0x00004000"/>
+      </chip>
+      <processor>
+         <name gcc_name="cortex-m33">Cortex-M33</name>
+         <family>Cortex-M</family>
+      </processor>
+   </info>
+</infoList>

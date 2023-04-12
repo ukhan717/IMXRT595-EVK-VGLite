@@ -191,9 +191,24 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>ThirdParty/MCUXpressoSDK/components/video/display/dmb_sc1</name>
+			<type>2</type>
+			<location>C:/WorkSpace/Documentation/SC1/NXP/SDKs/IMXRT595-EVK-VGLite/ThirdParty/MCUXpressoSDK/components/video/display/dmb_sc1</location>
+		</link>
+		<link>
 			<name>ThirdParty/MCUXpressoSDK/components/video/display/fbdev</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>ThirdParty/MCUXpressoSDK/components/video/display/fsl_dc_fb_lcdif.c</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/ThirdParty/MCUXpressoSDK/components/video/display/fsl_dc_fb_lcdif.c</locationURI>
+		</link>
+		<link>
+			<name>ThirdParty/MCUXpressoSDK/components/video/display/fsl_dc_fb_lcdif.h</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/ThirdParty/MCUXpressoSDK/components/video/display/fsl_dc_fb_lcdif.h</locationURI>
 		</link>
 		<link>
 			<name>ThirdParty/MCUXpressoSDK/components/video/display/mipi_dsi_cmd</name>
